@@ -1,0 +1,23 @@
+<header className="h-group">
+  <h1 className='item'>
+      <a routerLink='/'>{{title}}</a>
+  </h1>
+
+  <div *ngIf='hasToken; else loggedOutNav' className='logged-in-nav'>
+    <nav>
+      <a
+        (click)='handleLogoutClick()'
+        routerLink='/login'>
+        Logout
+      </a>
+    </nav>
+  </div>
+
+  <ng-template #loggedOutNav>
+  <nav>
+    <a routerLink='/login'>Login</a>
+    <a routerLink='/register'>Sign up</a>
+  </nav>
+  </ng-template>
+
+</header>
