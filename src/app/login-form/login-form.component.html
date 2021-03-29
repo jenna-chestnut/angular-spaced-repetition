@@ -1,0 +1,35 @@
+<form
+#f="ngForm" (ngSubmit)="submitLogin(f)"
+className='LoginForm'
+>
+<div *ngIf='error' role='alert'>
+  <p>{{error}}</p>
+</div>
+<div>
+  <label htmlFor='login-username-input'>
+    Username
+  </label>
+  <input
+    id='login-username-input'
+    name='username'
+    required
+    ngModel
+  />
+</div>
+<div>
+  <label htmlFor='login-password-input'>
+    Password
+  </label>
+  <input
+    id='login-password-input'
+    name='password'
+    type='password'
+    required
+    ngModel
+  />
+</div>
+<button>
+  Login
+</button>
+<a routerLink='/register'>Don't have an account yet?</a>
+</form>

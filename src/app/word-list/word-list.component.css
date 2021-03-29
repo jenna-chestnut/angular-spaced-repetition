@@ -1,0 +1,55 @@
+h3 {
+  background-color: #394552;
+  color: white;
+  padding: 35px 0px;
+  font-weight: normal;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+li h4 {
+  flex: 1;
+  text-align: left;
+  display: inline;
+  align-self: center;
+  font-size: 20px;
+  margin: 20px 10px;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 15px;
+  background-color: #cbdcec50;
+  list-style-type: none;
+  margin: 15px;
+  min-height: 50px;
+  padding: 15px;
+}
+
+li span {
+  margin: auto 10px;
+  text-align: center;
+}
+
+ul {
+  text-align: left;
+  margin: auto;
+  padding-left: 0;
+}
+
+@media all and (min-width:800px) {
+  ul {
+    width: 60%;
+  }
+  li {
+    flex-direction: row;
+  }
+  h3 {
+    margin-top: 5px;
+  }
+  li span {
+    text-align: right;
+  }
+}

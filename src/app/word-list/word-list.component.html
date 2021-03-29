@@ -1,0 +1,11 @@
+<div [className]="'word-list'">
+  <h3>Words to practice:</h3>
+   <ul>
+    <li *ngFor='let word of words'>
+      <h4>{{word.original}}</h4>
+      <span>Incorrect: {{word.incorrect_count}}
+       |
+        Correct: {{word.correct_count}} </span>
+    </li>
+   </ul>
+</div>

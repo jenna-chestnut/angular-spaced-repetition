@@ -1,0 +1,32 @@
+.dash-header {
+  margin: 0px;
+}
+
+.dashboard .group h2 {
+  margin-bottom: 5px;
+}
+
+.b-g {
+  display: flex;
+  align-content: center;
+}
+
+.s-b-p a {
+  font-weight: normal;
+  letter-spacing: 2px;
+  background-color:  #5e112f;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 1s;
+  align-self: center;
+  margin: auto;
+}
+
+.s-b-p a:hover {
+  border: none;
+  color: #252b31;
+  background-color: #ffbede;
+  transition: 1s;
+}

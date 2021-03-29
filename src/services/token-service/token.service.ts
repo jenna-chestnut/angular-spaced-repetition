@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 import jwtDecode from 'jwt-decode';
 import config from '../../config';
 
@@ -9,14 +9,18 @@ const _TEN_SECONDS_IN_MS = 10000;
   providedIn: 'root'
 })
 export class TokenService {
+  @Output() hasToken: EventEmitter<any> = new EventEmitter;
+
   saveAuthToken(token: string) {
-    window.localStorage.setItem(config.TOKEN_KEY, token)
+    window.localStorage.setItem(config.TOKEN_KEY, token);
+    this.hasToken.emit(true);
   }
   getAuthToken() {
     return window.localStorage.getItem(config.TOKEN_KEY)
   }
   clearAuthToken() {
-    window.localStorage.removeItem(config.TOKEN_KEY)
+    window.localStorage.removeItem(config.TOKEN_KEY);
+    this.hasToken.emit(false);
   }
   hasAuthToken() {
     return !!this.getAuthToken()

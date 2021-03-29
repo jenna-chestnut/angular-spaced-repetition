@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
 header {
   position: relative;
   background-color: #cbdcec;
+  padding: 15px;
 }
 
 header h1 a, header h1 a:hover {
   transition: none;
+  letter-spacing: 2px;
 }
 
 header h1 {
+  font-family: 'Arvo', helvetica;
   align-self: flex-start;
   text-align: left;
 }
@@ -25,12 +30,11 @@ header span {
 h1 {
   padding: 15px;
   font-size: 55px;
-  letter-spacing: 2px;
   margin-bottom: auto;
   margin-top: 45px;
 }
 
-nav, .logged-in-nav {
+nav {
   margin: auto;
   position: absolute;
   right: 0px;
@@ -38,7 +42,7 @@ nav, .logged-in-nav {
   padding-top: 10px;
 }
 
-.logged-in-nav span {
+span {
   display: block;
   margin: 0px;
   margin-right: 10px;
@@ -67,15 +71,15 @@ nav a {
       padding: 0 3%;
   }
   h1 {
-      padding-top: 0px;
-      font-size: 45px;
-      margin-top: 25px;
+      font-size: 55px;
+      margin-top: 15px;
   }
   nav {
       padding-top: 5px;
       position: relative;
   }
-  .logged-in-nav {
+  div.logged-in-nav {
+    display: flex;
     align-content: center;
     margin-right: 25px;
   }
