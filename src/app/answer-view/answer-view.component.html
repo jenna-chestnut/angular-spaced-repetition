@@ -1,0 +1,26 @@
+<div class='group a-v'>
+
+<div class='item'>
+  <h2 class='Results'>You are {{isC}}</h2>
+</div>
+<div class='item'>
+  <img src={{img}} alt='Cat' />
+</div>
+
+ <div class='item a-s'>
+ <p class='DisplayScore'>Total correct answers: {{answer.totalScore}}</p>
+ <p><b>Scores for {{answer.answer}}: </b></p>
+ <p>{{answer.wordCorrectCount}} correct  |
+ {{answer.wordIncorrectCount}} incorrect</p>
+ </div>
+</div>
+
+
+<div class='d-bg answer'>
+ <p class='bgr DisplayFeedback'>{{p}}
+  <span class='to-translate'>{{word}}</span>
+</p>
+</div>
+
+
+<button (click)='onNext()'>Keep practicing!</button>

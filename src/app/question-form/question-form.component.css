@@ -1,0 +1,58 @@
+form {
+  margin: 40px auto;
+  width: 90%;
+}
+
+legend {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+fieldset {
+  font-size: 20px;
+  border: none;
+}
+
+input {
+  margin: 5px auto;
+  width: 100%;
+}
+
+form button {
+  font-size: 20px;
+  display: block;
+  margin: 20px auto;
+}
+
+form label {
+  display: inline-block;
+  padding-top: 15px;
+  text-align: center;
+  height: 30px;
+  width: 60px;
+  margin: auto 5px;
+}
+form p {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+}
+
+form a {
+  margin-left: 10px;
+}
+
+@media all and (min-width: 600px) {
+  form {
+      width: 50%;
+  }
+  form input {
+      width: 50%;
+      margin: 20px auto;
+      margin-left: 15px;
+  }
+  form label {
+    padding-top: 0px;
+    text-align: right;
+  }
+}

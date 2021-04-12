@@ -1,0 +1,21 @@
+<div class='group'>
+  <div class='item'>
+    <h2>{{language.language.name}}</h2>
+  </div>
+  <div class='item'>
+  <p>Total correct answers: {{ answer.totalScore
+    ? answer.totalScore : head.totalScore
+    ? head.totalScore : 0}}</p>
+  </div>
+</div>
+
+<div class='d-bg question'>
+  <p class='bgr'>Translate the word:
+  </p>
+  <span class='to-translate '>{{head.nextWord}}</span>
+  <hr/>
+  <span>Current scores: {{head.wordCorrectCount}} correct  |
+  {{head.wordIncorrectCount}} incorrect</span>
+</div>
+
+<app-question-form></app-question-form>

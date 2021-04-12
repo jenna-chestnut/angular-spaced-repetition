@@ -7,7 +7,7 @@ import { LanguageService } from 'src/services/language-service/language.service'
   styleUrls: ['./word-list.component.css']
 })
 export class WordListComponent implements OnInit {
-  words: any = null;
+  words: any = [];
 
   constructor( private languageService: LanguageService ) {
     this.languageService.getLanguageInfo

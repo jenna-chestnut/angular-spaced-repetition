@@ -1,0 +1,52 @@
+.l-p {
+  padding-right: 3%;
+}
+
+.l-p label {
+  font-size: 20px;
+}
+
+.learning-page .item {
+  display: flex;
+}
+
+.learning-page .item p, .learning-page .item h2 {
+  margin: auto;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
+
+.d-bg {
+  background-color: rgb(57, 69, 82);
+  color: white;
+  padding: 5px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.d-bg hr {
+  color: white;
+  background-color: white;
+  width: 50%;
+}
+
+.question p {
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.question-form {
+  margin: 20px auto;
+}
+
+.to-translate {
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+@media all and (min-width: 800px) {
+  .l-p {
+    padding-right: 9%;
+  }
+}

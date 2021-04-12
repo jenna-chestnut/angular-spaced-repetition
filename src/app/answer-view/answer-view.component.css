@@ -1,0 +1,63 @@
+.answer {
+  margin-bottom: 20px;
+}
+
+p, h2 {
+  margin: auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-self: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.group {
+  display: flex;
+}
+
+.item {
+  display: flex;
+  flex: 1;
+}
+
+.a-s {
+  flex-direction: column;
+  padding: 55px 0px;
+}
+
+.a-v {
+  flex-direction: column;
+}
+
+.to-translate {
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+.bgr {
+  display: inline;
+}
+
+.d-bg {
+  background-color: rgb(57, 69, 82);
+  color: white;
+  padding: 5px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.d-bg hr {
+  color: white;
+  background-color: white;
+  width: 50%;
+}
+
+@media all and (min-width: 800px) {
+  .a-v {
+    flex-direction: row;
+  }
+}

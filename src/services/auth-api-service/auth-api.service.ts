@@ -24,6 +24,13 @@ export class AuthApiService {
     })
   }
 
+  httpOptionsWithAuth = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'authorization': `Bearer ${this.tokenService.getAuthToken()}`
+    })
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
@@ -33,6 +40,18 @@ export class AuthApiService {
 
   postLogin(user: {user_name: string, password: string}):  Observable<keyable> {
     return this.http.post<keyable>(this.url, user, this.httpOptions)
+    .pipe(
+      tap((res) => {
+        this.tokenService.saveAuthToken(res.authToken);
+        let user = this.tokenService.parseAuthToken();
+        this.getLoggedInName.emit(user.name)
+      }),
+      catchError(this.handleError<any>('login'))
+    )
+  }
+
+  refreshToken(): Observable<keyable> {
+    return this.http.put<keyable>(this.url,  this.httpOptionsWithAuth)
     .pipe(
       tap((res) => {
         this.tokenService.saveAuthToken(res.authToken);

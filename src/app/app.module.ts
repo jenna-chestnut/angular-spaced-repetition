@@ -14,6 +14,9 @@ import { DashboardComponent } from './routes/dashboard/dashboard.component';
 import { LearnComponent } from './routes/learn/learn.component';
 import { NotFoundComponent } from './routes/not-found/not-found.component';
 import { WordListComponent } from './word-list/word-list.component';
+import { AnswerViewComponent } from './answer-view/answer-view.component';
+import { QuestionViewComponent } from './question-view/question-view.component';
+import { QuestionFormComponent } from './question-form/question-form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { WordListComponent } from './word-list/word-list.component';
     DashboardComponent,
     LearnComponent,
     NotFoundComponent,
-    WordListComponent
+    WordListComponent,
+    AnswerViewComponent,
+    QuestionViewComponent,
+    QuestionFormComponent
   ],
   imports: [
     BrowserModule,

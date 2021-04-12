@@ -1,1 +1,13 @@
-<p>learn works!</p>
+<section class='learning-page'>
+  <h2>Learn Words</h2>
+  <hr/>
+
+  <div *ngIf='answer; else nextQuestion'>
+  <app-answer-view></app-answer-view>
+  </div>
+
+  <ng-template #nextQuestion>
+  <app-question-view></app-question-view>
+  </ng-template>
+
+</section>

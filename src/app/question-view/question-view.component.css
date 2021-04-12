@@ -1,0 +1,27 @@
+.bgr {
+  display: inline;
+}
+
+.d-bg {
+  background-color: rgb(57, 69, 82);
+  color: white;
+  padding: 5px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.d-bg hr {
+  color: white;
+  background-color: white;
+  width: 50%;
+}
+
+.question p {
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.to-translate {
+  font-size: 30px;
+  margin-left: 10px;
+}

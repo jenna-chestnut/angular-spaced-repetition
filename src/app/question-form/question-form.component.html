@@ -1,0 +1,18 @@
+<form
+#f="ngForm" (ngSubmit)="submitLogin(f)"
+class='question-form'
+>
+<div *ngIf='error' role='alert'>
+  <p>{{error}}</p>
+</div>
+  <div class="l-p">
+    <label for="learn-guess-input"> Guess: </label>
+    <input
+      id="learn-guess-input"
+      name="guess"
+      required
+      ngModel
+    />
+  </div>
+  <button>Submit</button>
+</form>

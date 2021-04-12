@@ -13,7 +13,10 @@ interface keyable {
 })
 export class LanguageService {
   @Output() getLanguageInfo: EventEmitter<any> = new EventEmitter;
+  @Output() getHeadInfo: EventEmitter<any> = new EventEmitter;
+  @Output() getAnswerInfo: EventEmitter<any> = new EventEmitter;
   language: any = null;
+  answer: any = {};
 
   private url = `${config.API_ENDPOINT}/language`
 
@@ -39,6 +42,27 @@ export class LanguageService {
         this.getLanguageInfo.emit(res);
        }),
       catchError(this.handleError<any>('get words'))
+      )
+  }
+
+  getHead(): Observable<keyable> {
+    return this.http.get<keyable>(`${this.url}/head`, this.httpOptions)
+    .pipe(
+      tap((res) => {
+        this.getHeadInfo.emit(res);
+       }),
+      catchError(this.handleError<any>('get head'))
+      )
+  }
+
+  postGuess(guess: {guess: string}): Observable<keyable> {
+    return this.http.post<keyable>(`${this.url}/guess`, guess, this.httpOptions)
+    .pipe(
+      tap((res) => {
+        this.getAnswerInfo.emit(res);
+        this.answer = res;
+       }),
+      catchError(this.handleError<any>('get head'))
       )
   }
 

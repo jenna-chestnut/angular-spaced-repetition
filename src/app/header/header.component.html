@@ -1,9 +1,9 @@
-<header [className]="'h-group'">
-  <h1 className='item'>
+<header class='h-group'>
+  <h1 class='item'>
       <a routerLink='/'>{{title}}</a>
   </h1>
 
-  <div *ngIf='hasToken; else loggedOutNav' className='logged-in-nav'>
+  <div *ngIf='hasToken; else loggedOutNav' class='logged-in-nav'>
     <nav>
       <span>{{username}}</span>
       <a

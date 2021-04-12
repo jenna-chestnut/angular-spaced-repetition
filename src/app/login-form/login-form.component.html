@@ -1,12 +1,12 @@
 <form
 #f="ngForm" (ngSubmit)="submitLogin(f)"
-className='LoginForm'
+class='LoginForm'
 >
 <div *ngIf='error' role='alert'>
   <p>{{error}}</p>
 </div>
 <div>
-  <label htmlFor='login-username-input'>
+  <label for='login-username-input'>
     Username
   </label>
   <input
@@ -17,7 +17,7 @@ className='LoginForm'
   />
 </div>
 <div>
-  <label htmlFor='login-password-input'>
+  <label for='login-password-input'>
     Password
   </label>
   <input
