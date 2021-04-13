@@ -43,7 +43,10 @@ export class AppComponent {
     if (tokenService.hasAuthToken()) {
       let user = tokenService.parseAuthToken();
       let now = Math.floor(new Date().getTime() / 1000);
-      if (user.exp < now) this.sendToLoginPage();
+      if (user.exp < now) {
+        tokenService.clearAuthToken();
+        this.sendToLoginPage();
+      }
 
       idleService.registerIdleTimerResets()
       tokenService.queueCallbackBeforeExpiry(() => {

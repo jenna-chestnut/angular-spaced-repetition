@@ -3,6 +3,12 @@ form {
   width: 90%;
 }
 
+.loading-image img {
+  width: 138px;
+  padding: 70px 0px;
+  margin: auto;
+}
+
 legend {
   font-size: 30px;
   margin-bottom: 30px;
