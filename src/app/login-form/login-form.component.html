@@ -1,8 +1,13 @@
+<div *ngIf='loading; else loginForm' class='loading-image'>
+  <img src={{loadingImg}} alt='loading' />
+</div>
+
+<ng-template #loginForm>
 <form
 #f="ngForm" (ngSubmit)="submitLogin(f)"
 class='LoginForm'
 >
-<div *ngIf='error' role='alert'>
+<div *ngIf='error' class='error-text' role='alert'>
   <p>{{error}}</p>
 </div>
 <div>
@@ -33,3 +38,4 @@ class='LoginForm'
 </button>
 <a routerLink='/register'>Don't have an account yet?</a>
 </form>
+</ng-template>

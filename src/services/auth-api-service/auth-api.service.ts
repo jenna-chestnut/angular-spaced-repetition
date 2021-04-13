@@ -4,6 +4,8 @@ import { Observable, of } from 'rxjs';
 import { TokenService } from '../token-service/token.service'
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
+import { LoginFormComponent } from 'src/app/login-form/login-form.component';
+import { LoginErrorService } from '../login-error-service/login-error-service.service';
 
 interface keyable {
   [key: string]: any
@@ -34,6 +36,7 @@ export class AuthApiService {
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
+      this.loginService.logError(error.error);
       return of(result as T);
     }
   }
@@ -64,6 +67,7 @@ export class AuthApiService {
 
   constructor(
     private tokenService: TokenService,
-    private http: HttpClient
+    private http: HttpClient,
+    private loginService: LoginErrorService
     ) { }
 }
