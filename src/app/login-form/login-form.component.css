@@ -3,6 +3,10 @@ form {
   width: 90%;
 }
 
+.error-text {
+  color: rgb(100, 6, 6);
+}
+
 .loading-image img {
   width: 138px;
   padding: 70px 0px;

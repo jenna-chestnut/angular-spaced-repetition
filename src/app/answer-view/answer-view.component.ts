@@ -43,7 +43,6 @@ export class AnswerViewComponent implements OnInit {
     private learn: LearnComponent
     ) {
       this.languageService.getAnswerInfo.subscribe(a => {
-        console.log(a);
         this.answer = a
       });
       this.languageService.getLanguageInfo.subscribe(lang => this.language = lang);
