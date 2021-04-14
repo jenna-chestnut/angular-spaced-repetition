@@ -17,6 +17,7 @@ import { WordListComponent } from './word-list/word-list.component';
 import { AnswerViewComponent } from './answer-view/answer-view.component';
 import { QuestionViewComponent } from './question-view/question-view.component';
 import { QuestionFormComponent } from './question-form/question-form.component';
+import { ErrorBannerComponent } from './error-banner/error-banner.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { QuestionFormComponent } from './question-form/question-form.component';
     WordListComponent,
     AnswerViewComponent,
     QuestionViewComponent,
-    QuestionFormComponent
+    QuestionFormComponent,
+    ErrorBannerComponent
   ],
   imports: [
     BrowserModule,
