@@ -1,7 +1,19 @@
 .error-banner {
-  background-color: rgb(255, 162, 162);
   margin-bottom: 15px;
-  margin-top: -10px;
+  width: 100%;
+  background-color: rgb(255, 162, 162);
   padding: 10px;
   font-weight: bold;
+  margin-top: -10px;
+}
+
+.error-banner button {
+  margin-left: 25px;
+}
+
+@media all and (min-width:600px) {
+  .error-banner {
+    position: relative;
+    top: auto;
+  }
 }

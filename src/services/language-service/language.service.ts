@@ -37,10 +37,8 @@ export class LanguageService {
     }
   }
 
-  // , this.httpOptions
-
   getWords(): Observable<keyable> {
-    return this.http.get<keyable>(this.url)
+    return this.http.get<keyable>(this.url, this.httpOptions)
     .pipe(
       tap((res) => {
         this.language = res;

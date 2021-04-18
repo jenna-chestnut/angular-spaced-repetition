@@ -9,6 +9,10 @@ import { ErrorHandlingService } from 'src/services/error-handling-service/error-
 export class ErrorBannerComponent implements OnInit {
   error: string = '';
 
+  clearError(): void {
+    this.errorHandling.clearError();
+  }
+
   constructor(
     private errorHandling: ErrorHandlingService
   ) {

@@ -1,1 +1,4 @@
-<div *ngIf='error.length' class='error-banner'>Error: {{error}}</div>
+<div *ngIf='error && error.length' class='error-banner'>
+  Error: {{error}}   
+  <button (click)="clearError()">Clear</button>
+</div>
