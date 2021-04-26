@@ -3,7 +3,7 @@
 header {
   position: relative;
   background-color: #cbdcec;
-  padding: 15px;
+  padding: 5px;
 }
 
 header h1 a, header h1 a:hover {
@@ -37,7 +37,7 @@ h1 {
 nav {
   margin: auto;
   position: absolute;
-  right: 0px;
+  right: 25px;
   text-align: right;
   padding-top: 10px;
 }
@@ -55,6 +55,11 @@ span {
   justify-content: space-between;
   flex-direction: column;
   margin-bottom: 10px;
+}
+
+div.logged-in-nav {
+  position: absolute;
+  width: 100%;
 }
 
 nav a {
@@ -77,13 +82,17 @@ nav a {
   nav {
       padding-top: 5px;
       position: relative;
+      right: 0;
   }
   div.logged-in-nav {
+    position: relative;
     display: flex;
     align-content: center;
     margin-right: 25px;
+    width: auto;
   }
   header {
       margin-top: 0;
+      padding: 15px;
   }
 }

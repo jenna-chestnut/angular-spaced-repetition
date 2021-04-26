@@ -4,6 +4,8 @@ import { Observable, of } from 'rxjs';
 import { TokenService } from '../token-service/token.service'
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
+import { ErrorBannerComponent } from 'src/app/error-banner/error-banner.component';
+import { ErrorHandlingService } from '../error-handling-service/error-handling.service';
 
 interface keyable {
   [key: string]: any
@@ -30,6 +32,7 @@ export class LanguageService {
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
+      this.errorHandling.logError(error.error)
       return of(result as T);
     }
   }
@@ -68,6 +71,7 @@ export class LanguageService {
 
   constructor(
     private tokenService: TokenService,
-    private http: HttpClient
+    private http: HttpClient,
+    private errorHandling: ErrorHandlingService
     ) { }
 }
